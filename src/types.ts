@@ -1,1 +1,8 @@
-export type OutputFormat='png'|'jpg'|'webp';export type Scale=2|4;export type Mode='fast'|'quality'|'ultra';export interface SourceImage{file:File;url:string;width:number;height:number}export interface UpscaleSettings{scale:Scale;outputMode:'4k'|'original-4x';mode:Mode;denoise:number;sharpness:number;format:OutputFormat;quality:number}export interface UpscaleResult{blob:Blob;url:string;width:number;height:number;ms:number;backend:string;tiles:number}
+export type DotShape='round'|'ellipse'|'square'|'line'
+export type PreviewMode='original'|'grayscale'|'levels'|'mask'|'final'
+export interface HalftoneSettings { lpi:number; angle:number; dotShape:DotShape; invert:boolean }
+export interface LevelsSettings { blackPoint:number; gamma:number; whitePoint:number; contrast:number }
+export interface MaskSettings { threshold:number; strength:number; fadeRange:number }
+export interface KnockoutSettings { enabled:boolean; color:string; tolerance:number }
+export interface AppSettings { halftone:HalftoneSettings; levels:LevelsSettings; mask:MaskSettings; knockout:KnockoutSettings; dpi:number }
+export interface ProcessedImage { width:number; height:number; original:ImageData; grayscale:ImageData; levels:ImageData; mask:ImageData; final:ImageData }
