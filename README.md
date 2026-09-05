@@ -13,7 +13,6 @@ npm run preview
 ## Deploy to Vercel
 Import this repository. Framework: Vite. Build command: `npm run build`. Output directory: `dist`.
 
-The ONNX model is downloaded by the browser on first use from the CoderViking Hugging Face model repository. It is licensed BSD-3-Clause. The app itself does not upload user images.
+The ONNX model is downloaded by the browser on first use from the CoderViking Hugging Face model repository. The app itself does not upload user images.
 
-## Important
-The app uses the model's native 4× inference. The 2× option runs 4× AI restoration and then downsamples to 2×. FIT 4K preserves aspect ratio and caps output at 3840×2160.
+The app uses native 4× AI inference; 2× is produced by high-quality downsampling. FIT 4K preserves aspect ratio and caps output at 3840×2160.
