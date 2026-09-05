@@ -1,18 +1,22 @@
-# ZANK Upscale
+# ZANK HALFTONE
 
-Free browser-local AI image upscaler using Real-ESRGAN general-x4v3 + ONNX Runtime Web.
+Free browser-local DTF halftone preparation tool.
+
+Pipeline: luminance → levels → rotated mathematical halftone screen → mask → original alpha × halftone mask → transparent PNG.
 
 ## Run
+
+```bash
 npm install
 npm run dev
+```
 
-## Build
+Production build:
+
+```bash
 npm run build
-npm run preview
+```
 
-## Deploy to Vercel
-Import this repository. Framework: Vite. Build command: `npm run build`. Output directory: `dist`.
+No backend, account, paid API, credits, watermark, or image-upload service is required.
 
-The ONNX model is downloaded by the browser on first use from the CoderViking Hugging Face model repository. The app itself does not upload user images.
-
-The app uses native 4× AI inference; 2× is produced by high-quality downsampling. FIT 4K preserves aspect ratio and caps output at 3840×2160.
+The `halftone` branch contains this app. The `main` branch remains the ZANK Upscale project.
