@@ -1,0 +1,1 @@
+export default {content:['./index.html','./src/**/*.{ts,tsx}'],theme:{extend:{colors:{zank:{bg:'#050505',panel:'#0d0f10',line:'#202326',muted:'#8b8f94',text:'#f5f5f5',accent:'#22c55e'}},fontFamily:{sans:['Inter','ui-sans-serif','system-ui','sans-serif'],mono:['ui-monospace','SFMono-Regular','Menlo','monospace']}}},plugins:[]}
